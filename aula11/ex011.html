@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 011</title>
+</head>
+<body>
+    <h1>Brasileiro ou Estrangeiro?</h1>
+    A qual país você pertence? <input type="text" name="txt1" id="txt1">
+    <input type="button" value="OK" onclick="nacionalidade()">
+    <div id="res"></div>
+
+    <script>
+        function nacionalidade(){
+            var pais = window.document.querySelector('input#txt1');
+            var res = window.document.querySelector('div#res');
+            if(pais.value == 'Brasil'){
+                res.innerHTML = `<p>Você é <strong>Brasileiro</strong>!</p>`;
+            } else {
+                res.innerHTML = `<p>Você é <strong>Estrangeiro</strong>!</p>`;
+            }
+        }
+    </script>
+</body>
+</html>
